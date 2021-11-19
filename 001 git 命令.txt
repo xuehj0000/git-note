@@ -1,0 +1,30 @@
+git –verson                                                      // 查看git版本
+git config --global user.name 姓名                 // 配置提交人的姓名
+git config --global user.email 邮箱名称           // 配置提交人的邮箱
+git config –list                                                  // 查看git配置信息
+
+git init                                                             // 初始化git仓库
+git status                                                         // 查看文件状态
+git add 文件列表                                              // 将文件添加到暂存区，跟踪文件
+git commit -m 提交信息                                  // 向仓库中提交代码，提交信息是备注
+git log                                                             // 查看提交记录
+
+git branch                                                      // 查看分支
+git branch 分支名称                                       // 基于所在分支创建分支
+git checkout 分支名称                                    // 切换到某分支
+git merge 来源分支名称                                 // 合并分支
+git branch -d 分支名称                                  // 删除分支
+
+git stash                                                        // 存储临时改动
+git stash pop                                                // 恢复改动
+
+git push 远程仓库地址 分支名称                     //将本地仓库推送到远程仓库
+git remote add origin 远程仓库地址              // 为远程仓库地址起个别名origin
+git push origin master                                  // 使用别名推送
+git push -u origin master                             // git 帮助记住远程地址和分支名称，下次提交直接git push
+
+git clone 远程仓库地址                                  // B克隆远程仓库
+git push origin master                                 // B向远程仓库推送代码
+
+git pull 远程仓库地址 分支名称                      //拉取远程仓库中最新的版本
+
