@@ -1,0 +1,24 @@
+1.命令
+start nginx         启动
+nginx -s reload     重启(优雅冲洗)
+
+
+
+
+1.nginx.conf 文件中
+
+http{
+	upstream CacheDemo{                     //配置,默认轮询的
+		server localhost:5177 weight=1;
+		server localhost:5178 weight=2;
+		server localhost:5179 weight=3;     //配置权重形式的
+	}
+
+    server {	
+		listen   80;                               //默认监听80端口          
+		server_name  localhost;
+		location / {                               
+            proxy_pass   http://CacheDemo         //指定代理转发
+		}
+	}
+}
