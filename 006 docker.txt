@@ -6,8 +6,10 @@ clear                     //清空客户端
 
 docker pull hello-world   //拉取镜像          从docker hub 中下载（hello-world镜像），放到本地镜像库中
 docker run hello-world    //启动镜像
-docker ps -a              //所有启动的镜像实例
+docker ps -a                    //所有启动的镜像实例
 
+docker build -t core31v1.813 -f Dockerfile.     //构建镜像  注意：这个. 指当前目录；dockerfile在项目文件夹一层。
+docker run -itd - 8082:80 core31v1.813          //启动镜像
 
 
 
